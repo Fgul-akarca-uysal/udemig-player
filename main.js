@@ -79,9 +79,9 @@ const timeFormatter = (timeInput) => {
 //sarkiyi calma
 const playAudio = () => {
     console.log("playAudio")
-  audio.play();
-  pauseButton.classList.remove("hide");
-  playButton.classList.add("hide");
+  audio.play()
+  pauseButton.classList.remove("hide")
+  playButton.classList.add("hide")
 };
 //sarki atama
 const setSong = (arrayIndex) => {
@@ -120,6 +120,7 @@ const nextSong = () => {
     setSong(randIndex);
   }
 };
+
 playListButton.addEventListener("click", () => {
   playListContainer.classList.remove("hide");
 });
@@ -138,13 +139,15 @@ setInterval(() => {
   currentProgress.style.width =
     (audio.currentTime / audio.duration.toFixed(3)) * 100 + "%";
 }, 1000);
+
+
 progressBar.addEventListener("click", (event) => {
   let coordStart = progressBar.getBoundingClientRect().left;
 
   let coordEnd = event.clientX;
   let progress = (coordEnd - coordStart) / progressBar.offsetWidth;
 
-  currentProgress.style.windows = progressBar * 100 + "%";
+  currentProgress.style.width = progressBar * 100 + "%";
 
   audio.currentTime = progress * audio.duration;
   audio.play;

@@ -99,7 +99,7 @@ img{
     top: 0;
     display: inline-block;
     background-color: rgb(10,100,200);
-    width: 10%;
+    width: 0%;
     height: 100%;
     border-radius: 2em;
 }
@@ -141,7 +141,7 @@ li{
     cursor: pointer;
 }
 .playlist-song-detail{
-     margin: 1rem;
+    margin: 1rem;
 }
 .playlist-image-container{
     width: 4em;
